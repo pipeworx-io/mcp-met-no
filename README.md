@@ -1,18 +1,20 @@
-# mcp-met-no
+# @pipeworx/met-no
 
-MET Norway (api.met.no) MCP — global weather, Nordics specials.
+Norwegian Meteorological Institute (api.met.no, the data behind yr.no) MCP — global forecast, nowcast, sunrise/sunset, air-quality, ocean forecast. Keyless but requires a descriptive User-Agent (set by the gateway).
 
-Part of [Pipeworx](https://pipeworx.io) — an MCP gateway connecting AI agents to 673+ live data sources.
+Part of [Pipeworx](https://pipeworx.io) — an MCP gateway connecting AI agents to 1394+ live data sources.
 
 ## Tools
 
-| Tool | Description |
-|------|-------------|
-| `forecast` | Compact 10-day forecast (temperature, precip, wind, cloud, humidity). |
-| `nowcast` | 90-minute precipitation nowcast (Nordics only — outside region returns sparse data). |
-| `sunrise` | Sunrise / sunset / moon events for a date. |
-| `airquality` | Air-quality forecast (Norway). |
-| `oceanforecast` | Ocean forecast — current, wave height, sea temperature. |
+- `forecast(lat, lon, altitude?)` — compact 10-day forecast (temperature, precip, wind, cloud)
+- `nowcast(lat, lon)` — 90-min precipitation nowcast (Nordics only)
+- `sunrise(lat, lon, date?)` — solar / lunar events for a given date
+- `airquality(lat, lon, areaclass?)` — air-quality forecast (Nordics)
+- `oceanforecast(lat, lon)` — ocean current, wave height, sea temperature
+
+## Data source
+
+`https://api.met.no/weatherapi/`
 
 ## Quick Start
 
@@ -28,7 +30,7 @@ Add to your MCP client (Claude Desktop, Cursor, Windsurf, etc.):
 }
 ```
 
-Or connect to the full Pipeworx gateway for access to all 673+ data sources:
+Or connect to the full Pipeworx gateway for access to all 1394+ data sources:
 
 ```json
 {
@@ -52,7 +54,7 @@ The gateway picks the right tool and fills the arguments automatically.
 
 ## More
 
-- [All tools and guides](https://github.com/pipeworx-io/examples)
+- [Docs and guides](https://pipeworx.io/docs)
 - [pipeworx.io](https://pipeworx.io)
 
 ## License
