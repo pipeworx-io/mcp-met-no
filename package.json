@@ -1,6 +1,6 @@
 {
   "name": "@pipeworx/mcp-met-no",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "MET Norway (api.met.no) MCP — global weather, Nordics specials.",
   "type": "module",
   "main": "src/index.ts",
@@ -26,7 +26,7 @@
     "@cloudflare/workers-types": "^4.20260405.1"
   },
   "pipeworx": {
-    "sourceHash": "v1-b70ccc9c53b65d338474427cffc759db2ba0618059378a47e693d83ae87e5fa2",
-    "sourceCommit": "6182c4cfebddb94950e060b5d2fca18f18ad1aca"
+    "sourceHash": "v1-c5bbf892f1f2a00d270ba64eea65cc071bae72e1b50988eacc110a3be9e8a88c",
+    "sourceCommit": "ba9dd6df5992aeb16ef2425ee86d1752c34ca636"
   }
 }
