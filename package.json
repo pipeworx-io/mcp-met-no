@@ -1,12 +1,20 @@
 {
   "name": "@pipeworx/mcp-met-no",
-  "version": "0.1.3",
+  "version": "0.2.0",
   "description": "MET Norway (api.met.no) MCP — global weather, Nordics specials.",
   "type": "module",
-  "main": "src/index.ts",
-  "types": "src/index.ts",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./tools.json": "./tools.json",
+    "./package.json": "./package.json"
+  },
   "bin": {
     "mcp-met-no": "bin/cli.js"
+  },
+  "files": ["bin/", "lib/", "tools.json", "server.json"],
+  "engines": {
+    "node": ">=18"
   },
   "keywords": ["mcp", "mcp-server", "model-context-protocol", "pipeworx", "met-no"],
   "license": "MIT",
@@ -14,19 +22,12 @@
     "type": "git",
     "url": "git+https://github.com/pipeworx-io/mcp-met-no.git"
   },
-  "scripts": {
-    "typecheck": "tsc --noEmit"
-  },
-  "dependencies": {
-    "@modelcontextprotocol/sdk": "^1.30.0",
-    "tsx": "^4.19.0"
-  },
-  "devDependencies": {
-    "typescript": "^5.9.3",
-    "@cloudflare/workers-types": "^4.20260405.1"
-  },
+  "mcpName": "io.github.pipeworx-io/met-no",
   "pipeworx": {
-    "sourceHash": "v1-c5bbf892f1f2a00d270ba64eea65cc071bae72e1b50988eacc110a3be9e8a88c",
-    "sourceCommit": "ba9dd6df5992aeb16ef2425ee86d1752c34ca636"
+    "mode": "gateway",
+    "slug": "met-no",
+    "gatewaySlug": "met-no",
+    "sourceHash": "v1-8e94d697e1faea68429f5bfc9a8ccf133ad7539a4a30c4f522a14409eb258d34",
+    "sourceCommit": "5c89d6abb778d45da5d92002eb251978622bedf9"
   }
 }

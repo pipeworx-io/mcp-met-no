@@ -1,0 +1,115 @@
+[
+  {
+    "name": "forecast",
+    "description": "Compact 10-day forecast (temperature, precip, wind, cloud, humidity).",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "lat": {
+          "type": "number",
+          "description": "Latitude (decimal degrees)."
+        },
+        "lon": {
+          "type": "number",
+          "description": "Longitude (decimal degrees)."
+        },
+        "altitude": {
+          "type": "number",
+          "description": "Meters above sea level (optional, improves accuracy)."
+        }
+      },
+      "required": [
+        "lat",
+        "lon"
+      ]
+    }
+  },
+  {
+    "name": "nowcast",
+    "description": "90-minute precipitation nowcast (Nordics only — outside region returns sparse data).",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "lat": {
+          "type": "number"
+        },
+        "lon": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "lat",
+        "lon"
+      ]
+    }
+  },
+  {
+    "name": "sunrise",
+    "description": "Sunrise / sunset / moon events for a date.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "lat": {
+          "type": "number"
+        },
+        "lon": {
+          "type": "number"
+        },
+        "date": {
+          "type": "string",
+          "description": "YYYY-MM-DD (default today UTC)."
+        },
+        "offset": {
+          "type": "string",
+          "description": "UTC offset, e.g. \"+01:00\" (default \"+00:00\")."
+        }
+      },
+      "required": [
+        "lat",
+        "lon"
+      ]
+    }
+  },
+  {
+    "name": "airquality",
+    "description": "Air-quality forecast (Norway).",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "lat": {
+          "type": "number"
+        },
+        "lon": {
+          "type": "number"
+        },
+        "areaclass": {
+          "type": "string",
+          "description": "grunnkrets | delomraade | kommune | fylke | land (default grunnkrets)"
+        }
+      },
+      "required": [
+        "lat",
+        "lon"
+      ]
+    }
+  },
+  {
+    "name": "oceanforecast",
+    "description": "Ocean forecast — current, wave height, sea temperature.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "lat": {
+          "type": "number"
+        },
+        "lon": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "lat",
+        "lon"
+      ]
+    }
+  }
+]
